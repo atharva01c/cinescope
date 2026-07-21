@@ -10,12 +10,12 @@
   background: transparent;
   cursor: pointer;
   text-decoration: none;
-  /* Smooth transform and box-shadow for a heavy, premium feel */
   transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
   outline: none;
 }
 
-.movie-card:hover, .movie-card:focus-visible {
+.movie-card:hover,
+.movie-card:focus-visible {
   transform: translateY(-12px) scale(1.02);
   z-index: 10;
 }
@@ -33,7 +33,7 @@
 }
 
 .movie-poster-container::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
@@ -44,7 +44,9 @@
 }
 
 .movie-card:hover .movie-poster-container {
-  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.8), 0 16px 32px rgba(0, 0, 0, 0.6);
+  box-shadow:
+    0 32px 64px rgba(0, 0, 0, 0.8),
+    0 16px 32px rgba(0, 0, 0, 0.6);
 }
 .movie-card:hover .movie-poster-container::after {
   border-color: rgba(255, 255, 255, 0.2);
@@ -54,7 +56,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.5s ease;
+  transition:
+    transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 0.5s ease;
   will-change: transform;
 }
 
@@ -65,7 +69,7 @@
 
 /* ── Glass Reflection ── */
 .movie-poster-container::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -78,7 +82,9 @@
   z-index: 4;
   opacity: 0;
   transform: translateX(-100%);
-  transition: opacity 0.5s ease, transform 0.8s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.8s ease;
   pointer-events: none;
 }
 
@@ -118,7 +124,11 @@
 .movie-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.6) 100%);
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,7 +138,8 @@
   z-index: 5;
 }
 
-.movie-card:hover .movie-overlay, .movie-card:focus-visible .movie-overlay {
+.movie-card:hover .movie-overlay,
+.movie-card:focus-visible .movie-overlay {
   opacity: 1;
 }
 
@@ -153,8 +164,12 @@
   transform: translateY(0);
 }
 
-.movie-card:hover .overlay-btn:nth-child(1) { transition-delay: 0.05s; }
-.movie-card:hover .overlay-btn:nth-child(2) { transition-delay: 0.1s; }
+.movie-card:hover .overlay-btn:nth-child(1) {
+  transition-delay: 0.05s;
+}
+.movie-card:hover .overlay-btn:nth-child(2) {
+  transition-delay: 0.1s;
+}
 
 .overlay-btn:hover {
   background: rgba(255, 255, 255, 0.15);
@@ -193,7 +208,7 @@
 }
 
 .movie-rating-badge::before {
-  content: '★';
+  content: "★";
   color: #ffb800;
   font-size: 0.9rem;
 }
