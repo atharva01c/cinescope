@@ -1,0 +1,1321 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "hyperedge_vite_react_compilation_tools",
+        "nodes": [
+          "readme_vite_react_plugin",
+          "readme_vite_react_swc_plugin",
+          "readme_react_compiler"
+        ],
+        "relation": "conceptually_related_to",
+        "source_file": "README.md"
+      },
+      {
+        "id": "hyperedge_frontend_brand_identity",
+        "nodes": [
+          "index_html_cinescope",
+          "index_html_google_fonts",
+          "skill_typography_pairing"
+        ],
+        "relation": "conceptually_related_to",
+        "source_file": "index.html"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "eslint.config.js",
+      "file_type": "code",
+      "source_file": "eslint.config.js",
+      "source_location": "L1",
+      "id": "eslint_config_js",
+      "community": 15,
+      "norm_label": "eslint.config.js"
+    },
+    {
+      "label": "vite.config.ts",
+      "file_type": "code",
+      "source_file": "vite.config.ts",
+      "source_location": "L1",
+      "id": "vite_config_ts",
+      "community": 16,
+      "norm_label": "vite.config.ts"
+    },
+    {
+      "label": "App.tsx",
+      "file_type": "code",
+      "source_file": "src\\App.tsx",
+      "source_location": "L1",
+      "id": "src_app_tsx",
+      "community": 6,
+      "norm_label": "app.tsx"
+    },
+    {
+      "label": "main.tsx",
+      "file_type": "code",
+      "source_file": "src\\main.tsx",
+      "source_location": "L1",
+      "id": "src_main_tsx",
+      "community": 6,
+      "norm_label": "main.tsx"
+    },
+    {
+      "label": "Footer.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\Footer.tsx",
+      "source_location": "L1",
+      "id": "src_components_footer_tsx",
+      "community": 7,
+      "norm_label": "footer.tsx"
+    },
+    {
+      "label": "Footer()",
+      "file_type": "code",
+      "source_file": "src\\components\\Footer.tsx",
+      "source_location": "L3",
+      "id": "footer_footer",
+      "community": 7,
+      "norm_label": "footer()"
+    },
+    {
+      "label": "Hero.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\Hero.tsx",
+      "source_location": "L1",
+      "id": "src_components_hero_tsx",
+      "community": 8,
+      "norm_label": "hero.tsx"
+    },
+    {
+      "label": "Hero()",
+      "file_type": "code",
+      "source_file": "src\\components\\Hero.tsx",
+      "source_location": "L5",
+      "id": "hero_hero",
+      "community": 8,
+      "norm_label": "hero()"
+    },
+    {
+      "label": "MovieCard.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\MovieCard.tsx",
+      "source_location": "L1",
+      "id": "src_components_moviecard_tsx",
+      "community": 4,
+      "norm_label": "moviecard.tsx"
+    },
+    {
+      "label": "handleCardClick()",
+      "file_type": "code",
+      "source_file": "src\\components\\MovieCard.tsx",
+      "source_location": "L31",
+      "id": "moviecard_handlecardclick",
+      "community": 4,
+      "norm_label": "handlecardclick()"
+    },
+    {
+      "label": "handleFavoriteClick()",
+      "file_type": "code",
+      "source_file": "src\\components\\MovieCard.tsx",
+      "source_location": "L35",
+      "id": "moviecard_handlefavoriteclick",
+      "community": 4,
+      "norm_label": "handlefavoriteclick()"
+    },
+    {
+      "label": "handleWatchlistClick()",
+      "file_type": "code",
+      "source_file": "src\\components\\MovieCard.tsx",
+      "source_location": "L44",
+      "id": "moviecard_handlewatchlistclick",
+      "community": 4,
+      "norm_label": "handlewatchlistclick()"
+    },
+    {
+      "label": "MovieGrid.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\MovieGrid.tsx",
+      "source_location": "L1",
+      "id": "src_components_moviegrid_tsx",
+      "community": 9,
+      "norm_label": "moviegrid.tsx"
+    },
+    {
+      "label": "MovieGrid()",
+      "file_type": "code",
+      "source_file": "src\\components\\MovieGrid.tsx",
+      "source_location": "L9",
+      "id": "moviegrid_moviegrid",
+      "community": 9,
+      "norm_label": "moviegrid()"
+    },
+    {
+      "label": "MovieSection.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\MovieSection.tsx",
+      "source_location": "L1",
+      "id": "src_components_moviesection_tsx",
+      "community": 17,
+      "norm_label": "moviesection.tsx"
+    },
+    {
+      "label": "Navbar.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\Navbar.tsx",
+      "source_location": "L1",
+      "id": "src_components_navbar_tsx",
+      "community": 18,
+      "norm_label": "navbar.tsx"
+    },
+    {
+      "label": "MovieContext.tsx",
+      "file_type": "code",
+      "source_file": "src\\context\\MovieContext.tsx",
+      "source_location": "L1",
+      "id": "src_context_moviecontext_tsx",
+      "community": 10,
+      "norm_label": "moviecontext.tsx"
+    },
+    {
+      "label": "MovieProvider()",
+      "file_type": "code",
+      "source_file": "src\\context\\MovieContext.tsx",
+      "source_location": "L22",
+      "id": "moviecontext_movieprovider",
+      "community": 10,
+      "norm_label": "movieprovider()"
+    },
+    {
+      "label": "ThemeContext.tsx",
+      "file_type": "code",
+      "source_file": "src\\context\\ThemeContext.tsx",
+      "source_location": "L1",
+      "id": "src_context_themecontext_tsx",
+      "community": 5,
+      "norm_label": "themecontext.tsx"
+    },
+    {
+      "label": "ThemeContextProvider()",
+      "file_type": "code",
+      "source_file": "src\\context\\ThemeContext.tsx",
+      "source_location": "L21",
+      "id": "themecontext_themecontextprovider",
+      "community": 5,
+      "norm_label": "themecontextprovider()"
+    },
+    {
+      "label": "useTheme()",
+      "file_type": "code",
+      "source_file": "src\\context\\ThemeContext.tsx",
+      "source_location": "L45",
+      "id": "themecontext_usetheme",
+      "community": 5,
+      "norm_label": "usetheme()"
+    },
+    {
+      "label": "Favorites.tsx",
+      "file_type": "code",
+      "source_file": "src\\pages\\Favorites.tsx",
+      "source_location": "L1",
+      "id": "src_pages_favorites_tsx",
+      "community": 11,
+      "norm_label": "favorites.tsx"
+    },
+    {
+      "label": "Favorites()",
+      "file_type": "code",
+      "source_file": "src\\pages\\Favorites.tsx",
+      "source_location": "L14",
+      "id": "favorites_favorites",
+      "community": 11,
+      "norm_label": "favorites()"
+    },
+    {
+      "label": "Home.tsx",
+      "file_type": "code",
+      "source_file": "src\\pages\\Home.tsx",
+      "source_location": "L1",
+      "id": "src_pages_home_tsx",
+      "community": 0,
+      "norm_label": "home.tsx"
+    },
+    {
+      "label": "fetchHomeData()",
+      "file_type": "code",
+      "source_file": "src\\pages\\Home.tsx",
+      "source_location": "L28",
+      "id": "home_fetchhomedata",
+      "community": 0,
+      "norm_label": "fetchhomedata()"
+    },
+    {
+      "label": "MovieDetails.tsx",
+      "file_type": "code",
+      "source_file": "src\\pages\\MovieDetails.tsx",
+      "source_location": "L1",
+      "id": "src_pages_moviedetails_tsx",
+      "community": 0,
+      "norm_label": "moviedetails.tsx"
+    },
+    {
+      "label": "fetchMovieData()",
+      "file_type": "code",
+      "source_file": "src\\pages\\MovieDetails.tsx",
+      "source_location": "L54",
+      "id": "moviedetails_fetchmoviedata",
+      "community": 0,
+      "norm_label": "fetchmoviedata()"
+    },
+    {
+      "label": "Movies.tsx",
+      "file_type": "code",
+      "source_file": "src\\pages\\Movies.tsx",
+      "source_location": "L1",
+      "id": "src_pages_movies_tsx",
+      "community": 1,
+      "norm_label": "movies.tsx"
+    },
+    {
+      "label": "fetchGenres()",
+      "file_type": "code",
+      "source_file": "src\\pages\\Movies.tsx",
+      "source_location": "L26",
+      "id": "movies_fetchgenres",
+      "community": 1,
+      "norm_label": "fetchgenres()"
+    },
+    {
+      "label": "fetchMovies()",
+      "file_type": "code",
+      "source_file": "src\\pages\\Movies.tsx",
+      "source_location": "L39",
+      "id": "movies_fetchmovies",
+      "community": 1,
+      "norm_label": "fetchmovies()"
+    },
+    {
+      "label": "handleGenreClick()",
+      "file_type": "code",
+      "source_file": "src\\pages\\Movies.tsx",
+      "source_location": "L59",
+      "id": "movies_handlegenreclick",
+      "community": 1,
+      "norm_label": "handlegenreclick()"
+    },
+    {
+      "label": "handleSortChange()",
+      "file_type": "code",
+      "source_file": "src\\pages\\Movies.tsx",
+      "source_location": "L64",
+      "id": "movies_handlesortchange",
+      "community": 1,
+      "norm_label": "handlesortchange()"
+    },
+    {
+      "label": "handlePageChange()",
+      "file_type": "code",
+      "source_file": "src\\pages\\Movies.tsx",
+      "source_location": "L69",
+      "id": "movies_handlepagechange",
+      "community": 1,
+      "norm_label": "handlepagechange()"
+    },
+    {
+      "label": "NotFound.tsx",
+      "file_type": "code",
+      "source_file": "src\\pages\\NotFound.tsx",
+      "source_location": "L1",
+      "id": "src_pages_notfound_tsx",
+      "community": 12,
+      "norm_label": "notfound.tsx"
+    },
+    {
+      "label": "NotFound()",
+      "file_type": "code",
+      "source_file": "src\\pages\\NotFound.tsx",
+      "source_location": "L11",
+      "id": "notfound_notfound",
+      "community": 12,
+      "norm_label": "notfound()"
+    },
+    {
+      "label": "Search.tsx",
+      "file_type": "code",
+      "source_file": "src\\pages\\Search.tsx",
+      "source_location": "L1",
+      "id": "src_pages_search_tsx",
+      "community": 13,
+      "norm_label": "search.tsx"
+    },
+    {
+      "label": "Search()",
+      "file_type": "code",
+      "source_file": "src\\pages\\Search.tsx",
+      "source_location": "L34",
+      "id": "search_search",
+      "community": 13,
+      "norm_label": "search()"
+    },
+    {
+      "label": "Watchlist.tsx",
+      "file_type": "code",
+      "source_file": "src\\pages\\Watchlist.tsx",
+      "source_location": "L1",
+      "id": "src_pages_watchlist_tsx",
+      "community": 14,
+      "norm_label": "watchlist.tsx"
+    },
+    {
+      "label": "Watchlist()",
+      "file_type": "code",
+      "source_file": "src\\pages\\Watchlist.tsx",
+      "source_location": "L14",
+      "id": "watchlist_watchlist",
+      "community": 14,
+      "norm_label": "watchlist()"
+    },
+    {
+      "label": "api.ts",
+      "file_type": "code",
+      "source_file": "src\\services\\api.ts",
+      "source_location": "L1",
+      "id": "src_services_api_ts",
+      "community": 0,
+      "norm_label": "api.ts"
+    },
+    {
+      "label": "getPopularMovies()",
+      "file_type": "code",
+      "source_file": "src\\services\\api.ts",
+      "source_location": "L15",
+      "id": "api_getpopularmovies",
+      "community": 0,
+      "norm_label": "getpopularmovies()"
+    },
+    {
+      "label": "getTopRatedMovies()",
+      "file_type": "code",
+      "source_file": "src\\services\\api.ts",
+      "source_location": "L20",
+      "id": "api_gettopratedmovies",
+      "community": 0,
+      "norm_label": "gettopratedmovies()"
+    },
+    {
+      "label": "getUpcomingMovies()",
+      "file_type": "code",
+      "source_file": "src\\services\\api.ts",
+      "source_location": "L25",
+      "id": "api_getupcomingmovies",
+      "community": 0,
+      "norm_label": "getupcomingmovies()"
+    },
+    {
+      "label": "getMovieDetails()",
+      "file_type": "code",
+      "source_file": "src\\services\\api.ts",
+      "source_location": "L30",
+      "id": "api_getmoviedetails",
+      "community": 0,
+      "norm_label": "getmoviedetails()"
+    },
+    {
+      "label": "getMovieCast()",
+      "file_type": "code",
+      "source_file": "src\\services\\api.ts",
+      "source_location": "L35",
+      "id": "api_getmoviecast",
+      "community": 0,
+      "norm_label": "getmoviecast()"
+    },
+    {
+      "label": "getSimilarMovies()",
+      "file_type": "code",
+      "source_file": "src\\services\\api.ts",
+      "source_location": "L40",
+      "id": "api_getsimilarmovies",
+      "community": 0,
+      "norm_label": "getsimilarmovies()"
+    },
+    {
+      "label": "getGenres()",
+      "file_type": "code",
+      "source_file": "src\\services\\api.ts",
+      "source_location": "L45",
+      "id": "api_getgenres",
+      "community": 1,
+      "norm_label": "getgenres()"
+    },
+    {
+      "label": "searchMovies()",
+      "file_type": "code",
+      "source_file": "src\\services\\api.ts",
+      "source_location": "L50",
+      "id": "api_searchmovies",
+      "community": 0,
+      "norm_label": "searchmovies()"
+    },
+    {
+      "label": "discoverMovies()",
+      "file_type": "code",
+      "source_file": "src\\services\\api.ts",
+      "source_location": "L63",
+      "id": "api_discovermovies",
+      "community": 1,
+      "norm_label": "discovermovies()"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src\\types\\index.ts",
+      "source_location": "L1",
+      "id": "src_types_index_ts",
+      "community": 19,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "Theme.ts",
+      "file_type": "code",
+      "source_file": "src\\types\\Theme.ts",
+      "source_location": "L1",
+      "id": "src_types_theme_ts",
+      "community": 20,
+      "norm_label": "theme.ts"
+    },
+    {
+      "label": "index.html Entry Point",
+      "file_type": "code",
+      "source_file": "index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "index_html",
+      "community": 2,
+      "norm_label": "index.html entry point"
+    },
+    {
+      "label": "CineScope Movie Explorer Metadata",
+      "file_type": "concept",
+      "source_file": "index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "index_html_cinescope",
+      "community": 2,
+      "norm_label": "cinescope movie explorer metadata"
+    },
+    {
+      "label": "Google Fonts (Instrument Serif & Barlow)",
+      "file_type": "concept",
+      "source_file": "index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "index_html_google_fonts",
+      "community": 2,
+      "norm_label": "google fonts (instrument serif & barlow)"
+    },
+    {
+      "label": "React + TypeScript + Vite Template",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_vite_react_template",
+      "community": 3,
+      "norm_label": "react + typescript + vite template"
+    },
+    {
+      "label": "@vitejs/plugin-react (Oxc)",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_vite_react_plugin",
+      "community": 3,
+      "norm_label": "@vitejs/plugin-react (oxc)"
+    },
+    {
+      "label": "@vitejs/plugin-react-swc (SWC)",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_vite_react_swc_plugin",
+      "community": 3,
+      "norm_label": "@vitejs/plugin-react-swc (swc)"
+    },
+    {
+      "label": "React Compiler Performance Rationale",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_react_compiler",
+      "community": 3,
+      "norm_label": "react compiler performance rationale"
+    },
+    {
+      "label": "ESLint Type-Aware Rules Configuration",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_eslint_config",
+      "community": 3,
+      "norm_label": "eslint type-aware rules configuration"
+    },
+    {
+      "label": "Frontend Design Skill Specification",
+      "file_type": "document",
+      "source_file": "SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skill_frontend_design",
+      "community": 2,
+      "norm_label": "frontend design skill specification"
+    },
+    {
+      "label": "Distinctive Design Principles & Motion Rationale",
+      "file_type": "rationale",
+      "source_file": "SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skill_design_principles",
+      "community": 2,
+      "norm_label": "distinctive design principles & motion rationale"
+    },
+    {
+      "label": "Typography Pairing and Scaled Display Roles",
+      "file_type": "rationale",
+      "source_file": "SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skill_typography_pairing",
+      "community": 2,
+      "norm_label": "typography pairing and scaled display roles"
+    },
+    {
+      "label": "Two-Pass Brainstorm & Critique Process",
+      "file_type": "rationale",
+      "source_file": "SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skill_design_process",
+      "community": 2,
+      "norm_label": "two-pass brainstorm & critique process"
+    },
+    {
+      "label": "Interface Copywriting & User Voice Guidelines",
+      "file_type": "rationale",
+      "source_file": "SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skill_interface_copywriting",
+      "community": 2,
+      "norm_label": "interface copywriting & user voice guidelines"
+    },
+    {
+      "label": "Isometric Stacked Layer Hero Illustration",
+      "file_type": "image",
+      "source_file": "src\\assets\\hero.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "src_assets_hero",
+      "community": 21,
+      "norm_label": "isometric stacked layer hero illustration"
+    },
+    {
+      "label": "React Logo SVG",
+      "file_type": "image",
+      "source_file": "src\\assets\\react.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "src_assets_react_logo",
+      "community": 22,
+      "norm_label": "react logo svg"
+    },
+    {
+      "label": "Vite Logo SVG",
+      "file_type": "image",
+      "source_file": "src\\assets\\vite.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "src_assets_vite_logo",
+      "community": 23,
+      "norm_label": "vite logo svg"
+    }
+  ],
+  "links": [
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\main.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "src_main_tsx",
+      "_tgt": "src_app_tsx",
+      "source": "src_app_tsx",
+      "target": "src_main_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\Footer.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "src_components_footer_tsx",
+      "_tgt": "footer_footer",
+      "source": "src_components_footer_tsx",
+      "target": "footer_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\Hero.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "src_components_hero_tsx",
+      "_tgt": "hero_hero",
+      "source": "src_components_hero_tsx",
+      "target": "hero_hero",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\MovieCard.tsx",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_src": "src_components_moviecard_tsx",
+      "_tgt": "moviecard_handlecardclick",
+      "source": "src_components_moviecard_tsx",
+      "target": "moviecard_handlecardclick",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\MovieCard.tsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_src": "src_components_moviecard_tsx",
+      "_tgt": "moviecard_handlefavoriteclick",
+      "source": "src_components_moviecard_tsx",
+      "target": "moviecard_handlefavoriteclick",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\MovieCard.tsx",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_src": "src_components_moviecard_tsx",
+      "_tgt": "moviecard_handlewatchlistclick",
+      "source": "src_components_moviecard_tsx",
+      "target": "moviecard_handlewatchlistclick",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\MovieGrid.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_src": "src_components_moviegrid_tsx",
+      "_tgt": "moviegrid_moviegrid",
+      "source": "src_components_moviegrid_tsx",
+      "target": "moviegrid_moviegrid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\context\\MovieContext.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_src": "src_context_moviecontext_tsx",
+      "_tgt": "moviecontext_movieprovider",
+      "source": "src_context_moviecontext_tsx",
+      "target": "moviecontext_movieprovider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\context\\ThemeContext.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_src": "src_context_themecontext_tsx",
+      "_tgt": "themecontext_themecontextprovider",
+      "source": "src_context_themecontext_tsx",
+      "target": "themecontext_themecontextprovider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\context\\ThemeContext.tsx",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_src": "src_context_themecontext_tsx",
+      "_tgt": "themecontext_usetheme",
+      "source": "src_context_themecontext_tsx",
+      "target": "themecontext_usetheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\Favorites.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_src": "src_pages_favorites_tsx",
+      "_tgt": "favorites_favorites",
+      "source": "src_pages_favorites_tsx",
+      "target": "favorites_favorites",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\Home.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_src": "src_pages_home_tsx",
+      "_tgt": "home_fetchhomedata",
+      "source": "src_pages_home_tsx",
+      "target": "home_fetchhomedata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src\\pages\\Home.tsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_src": "home_fetchhomedata",
+      "_tgt": "api_getpopularmovies",
+      "source": "home_fetchhomedata",
+      "target": "api_getpopularmovies"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src\\pages\\Home.tsx",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_src": "home_fetchhomedata",
+      "_tgt": "api_gettopratedmovies",
+      "source": "home_fetchhomedata",
+      "target": "api_gettopratedmovies"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src\\pages\\Home.tsx",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_src": "home_fetchhomedata",
+      "_tgt": "api_getupcomingmovies",
+      "source": "home_fetchhomedata",
+      "target": "api_getupcomingmovies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\MovieDetails.tsx",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_src": "src_pages_moviedetails_tsx",
+      "_tgt": "moviedetails_fetchmoviedata",
+      "source": "src_pages_moviedetails_tsx",
+      "target": "moviedetails_fetchmoviedata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src\\pages\\MovieDetails.tsx",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_src": "moviedetails_fetchmoviedata",
+      "_tgt": "api_getmoviedetails",
+      "source": "moviedetails_fetchmoviedata",
+      "target": "api_getmoviedetails"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src\\pages\\MovieDetails.tsx",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_src": "moviedetails_fetchmoviedata",
+      "_tgt": "api_getmoviecast",
+      "source": "moviedetails_fetchmoviedata",
+      "target": "api_getmoviecast"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src\\pages\\MovieDetails.tsx",
+      "source_location": "L63",
+      "weight": 1.0,
+      "_src": "moviedetails_fetchmoviedata",
+      "_tgt": "api_getsimilarmovies",
+      "source": "moviedetails_fetchmoviedata",
+      "target": "api_getsimilarmovies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\Movies.tsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_src": "src_pages_movies_tsx",
+      "_tgt": "movies_fetchgenres",
+      "source": "src_pages_movies_tsx",
+      "target": "movies_fetchgenres",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\Movies.tsx",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_src": "src_pages_movies_tsx",
+      "_tgt": "movies_fetchmovies",
+      "source": "src_pages_movies_tsx",
+      "target": "movies_fetchmovies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\Movies.tsx",
+      "source_location": "L59",
+      "weight": 1.0,
+      "_src": "src_pages_movies_tsx",
+      "_tgt": "movies_handlegenreclick",
+      "source": "src_pages_movies_tsx",
+      "target": "movies_handlegenreclick",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\Movies.tsx",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_src": "src_pages_movies_tsx",
+      "_tgt": "movies_handlesortchange",
+      "source": "src_pages_movies_tsx",
+      "target": "movies_handlesortchange",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\Movies.tsx",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_src": "src_pages_movies_tsx",
+      "_tgt": "movies_handlepagechange",
+      "source": "src_pages_movies_tsx",
+      "target": "movies_handlepagechange",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src\\pages\\Movies.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_src": "movies_fetchgenres",
+      "_tgt": "api_getgenres",
+      "source": "movies_fetchgenres",
+      "target": "api_getgenres"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src\\pages\\Movies.tsx",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_src": "movies_fetchmovies",
+      "_tgt": "api_discovermovies",
+      "source": "movies_fetchmovies",
+      "target": "api_discovermovies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\NotFound.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_src": "src_pages_notfound_tsx",
+      "_tgt": "notfound_notfound",
+      "source": "src_pages_notfound_tsx",
+      "target": "notfound_notfound",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\Search.tsx",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_src": "src_pages_search_tsx",
+      "_tgt": "search_search",
+      "source": "src_pages_search_tsx",
+      "target": "search_search",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\Watchlist.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_src": "src_pages_watchlist_tsx",
+      "_tgt": "watchlist_watchlist",
+      "source": "src_pages_watchlist_tsx",
+      "target": "watchlist_watchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\services\\api.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_src": "src_services_api_ts",
+      "_tgt": "api_getpopularmovies",
+      "source": "src_services_api_ts",
+      "target": "api_getpopularmovies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\services\\api.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "src_services_api_ts",
+      "_tgt": "api_gettopratedmovies",
+      "source": "src_services_api_ts",
+      "target": "api_gettopratedmovies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\services\\api.ts",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_src": "src_services_api_ts",
+      "_tgt": "api_getupcomingmovies",
+      "source": "src_services_api_ts",
+      "target": "api_getupcomingmovies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\services\\api.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_src": "src_services_api_ts",
+      "_tgt": "api_getmoviedetails",
+      "source": "src_services_api_ts",
+      "target": "api_getmoviedetails",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\services\\api.ts",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_src": "src_services_api_ts",
+      "_tgt": "api_getmoviecast",
+      "source": "src_services_api_ts",
+      "target": "api_getmoviecast",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\services\\api.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_src": "src_services_api_ts",
+      "_tgt": "api_getsimilarmovies",
+      "source": "src_services_api_ts",
+      "target": "api_getsimilarmovies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\services\\api.ts",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_src": "src_services_api_ts",
+      "_tgt": "api_getgenres",
+      "source": "src_services_api_ts",
+      "target": "api_getgenres",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\services\\api.ts",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_src": "src_services_api_ts",
+      "_tgt": "api_searchmovies",
+      "source": "src_services_api_ts",
+      "target": "api_searchmovies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\services\\api.ts",
+      "source_location": "L63",
+      "weight": 1.0,
+      "_src": "src_services_api_ts",
+      "_tgt": "api_discovermovies",
+      "source": "src_services_api_ts",
+      "target": "api_discovermovies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "index_html",
+      "_tgt": "index_html_cinescope",
+      "source": "index_html",
+      "target": "index_html_cinescope"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "index_html",
+      "_tgt": "index_html_google_fonts",
+      "source": "index_html",
+      "target": "index_html_google_fonts"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "index.html",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "index_html_google_fonts",
+      "_tgt": "skill_typography_pairing",
+      "source": "index_html_google_fonts",
+      "target": "skill_typography_pairing"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "readme_vite_react_template",
+      "_tgt": "readme_vite_react_plugin",
+      "source": "readme_vite_react_template",
+      "target": "readme_vite_react_plugin"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "readme_vite_react_template",
+      "_tgt": "readme_vite_react_swc_plugin",
+      "source": "readme_vite_react_template",
+      "target": "readme_vite_react_swc_plugin"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "readme_vite_react_template",
+      "_tgt": "readme_react_compiler",
+      "source": "readme_vite_react_template",
+      "target": "readme_react_compiler"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "readme_vite_react_template",
+      "_tgt": "readme_eslint_config",
+      "source": "readme_vite_react_template",
+      "target": "readme_eslint_config"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "readme_vite_react_plugin",
+      "_tgt": "readme_vite_react_swc_plugin",
+      "source": "readme_vite_react_plugin",
+      "target": "readme_vite_react_swc_plugin"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "skill_frontend_design",
+      "_tgt": "skill_design_principles",
+      "source": "skill_frontend_design",
+      "target": "skill_design_principles"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "skill_frontend_design",
+      "_tgt": "skill_typography_pairing",
+      "source": "skill_frontend_design",
+      "target": "skill_typography_pairing"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "skill_frontend_design",
+      "_tgt": "skill_design_process",
+      "source": "skill_frontend_design",
+      "target": "skill_design_process"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "skill_frontend_design",
+      "_tgt": "skill_interface_copywriting",
+      "source": "skill_frontend_design",
+      "target": "skill_interface_copywriting"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "hyperedge_vite_react_compilation_tools",
+      "nodes": [
+        "readme_vite_react_plugin",
+        "readme_vite_react_swc_plugin",
+        "readme_react_compiler"
+      ],
+      "relation": "conceptually_related_to",
+      "source_file": "README.md"
+    },
+    {
+      "id": "hyperedge_frontend_brand_identity",
+      "nodes": [
+        "index_html_cinescope",
+        "index_html_google_fonts",
+        "skill_typography_pairing"
+      ],
+      "relation": "conceptually_related_to",
+      "source_file": "index.html"
+    }
+  ]
+}

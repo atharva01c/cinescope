@@ -1,0 +1,75 @@
+/* ═══════════════════════════════════════════════════════════
+   NotFound Page
+   ═══════════════════════════════════════════════════════════ */
+
+.not-found-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--space-2xl) var(--space-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.not-found-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+  padding: var(--space-3xl) var(--space-2xl);
+  border-radius: var(--radius-xl);
+  max-width: 600px;
+  z-index: 10;
+}
+
+.error-code {
+  font-family: var(--font-display);
+  font-size: 8rem;
+  font-style: italic;
+  line-height: 1;
+  margin: 0 0 var(--space-md);
+  background: linear-gradient(135deg, #ffffff, rgba(255,255,255,0.2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.error-title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0 0 var(--space-md);
+  color: var(--text-h);
+}
+
+.error-description {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-xl);
+  line-height: 1.6;
+}
+
+.back-home-btn {
+  background: rgba(255, 255, 255, 0.95);
+  color: #000;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.back-home-btn:hover {
+  transform: translateY(-2px);
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
+}

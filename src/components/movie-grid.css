@@ -1,0 +1,53 @@
+/* Combining movie-grid and movie-section styles into movie-section.css, so we can just leave this mostly empty or just keeping the grid layout */
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-xl) var(--space-lg);
+  width: 100%;
+}
+
+.movie-grid-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-3xl) 0;
+  width: 100%;
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: var(--space-lg) var(--space-md);
+  }
+}
+
+/* ── Skeleton Card Loader ── */
+.skeleton-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  width: 100%;
+}
+
+.skeleton-card-poster {
+  width: 100%;
+  aspect-ratio: 2/3;
+  border-radius: var(--radius-md);
+}
+
+.skeleton-card-title {
+  height: 20px;
+  width: 80%;
+  border-radius: var(--radius-sm);
+}
+
+.skeleton-card-year {
+  height: 14px;
+  width: 40%;
+  border-radius: var(--radius-sm);
+}
