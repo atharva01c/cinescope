@@ -1,4 +1,4 @@
-# <a href="http://35.154.56.73/">🎬 CineScope — Movie Explorer</a>
+# <u><a href="http://35.154.56.73/">🎬 CineScope — Movie Explorer</a></u>
 
 > A sleek, responsive, and feature-rich cinematic web application to discover, search, and curate your personal movie collection. Powered by React 19, Vite, TypeScript, and the TMDB API.
 
