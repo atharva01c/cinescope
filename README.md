@@ -1,75 +1,112 @@
-# React + TypeScript + Vite
+# 🎬 CineScope — Movie Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A sleek, responsive, and feature-rich cinematic web application to discover, search, and curate your personal movie collection. Powered by React 19, Vite, TypeScript, and the TMDB API.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- 🌟 **Trending & Highlights**: Hero banner featuring top spotlight movies with backdrop visuals, ratings, and quick actions.
+- 🍿 **Curated Categories**: Browse through **Popular**, **Top Rated**, and **Upcoming** movies.
+- 🔍 **Search & Discover**: Search any movie by title or filter by genres and sorting options (Popularity, Rating, Release Date).
+- 🎬 **Comprehensive Movie Details**: Detailed view including movie backdrop, synopsis, runtime, release date, user rating, cast details, and recommended similar movies.
+- ❤️ **Favorites & 📌 Watchlist**: Save movies to your personal Favorites or Watchlist, persisted locally in your browser (`localStorage`).
+- 🌓 **Dark & Light Mode**: Seamless theme switching with custom design tokens and persistent user preferences.
+- 🎨 **Cinematic UI & Animations**: Built with modern CSS design variables, glassmorphism, responsive grids, and smooth page transitions powered by **Framer Motion**.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Framework**: [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool**: [Vite 8](https://vitejs.dev/)
+- **Routing**: [React Router DOM v7](https://reactrouter.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **HTTP Client**: [Axios](https://axios-http.com/)
+- **Data Source**: [TMDB API (The Movie Database)](https://www.themoviedb.org/documentation/api)
+- **Styling**: Vanilla CSS (CSS Modules & Custom Variables) with custom dark/light design system
+- **Typography**: Google Fonts (*Instrument Serif* & *Barlow*)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📁 Project Structure
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```text
+movie-explorer/
+├── public/                # Static assets
+├── src/
+│   ├── assets/            # Project images and graphics
+│   ├── components/        # Reusable UI components (Navbar, Footer, MovieCard, Hero, etc.)
+│   ├── context/           # React Context (MovieContext, ThemeContext)
+│   ├── pages/             # Route pages (Home, Movies, Search, MovieDetails, Favorites, Watchlist, NotFound)
+│   ├── services/          # API layer and TMDB integration (api.ts)
+│   ├── types/             # TypeScript interfaces and type definitions
+│   ├── App.tsx            # Main application component & routes setup
+│   ├── index.css          # Global styles & CSS variable tokens
+│   └── main.tsx           # Application entry point
+├── .env                   # Environment configuration (TMDB API Token)
+├── index.html             # HTML entry template
+├── package.json           # Project dependencies & scripts
+├── tsconfig.json          # TypeScript configuration
+└── vite.config.ts         # Vite bundler configuration
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Follow these steps to set up and run the project locally on your machine.
 
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- `npm` (comes bundled with Node.js) or `yarn`
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/movie-explorer.git
+cd movie-explorer
 ```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure Environment Variables
+
+Create a `.env` file in the root directory (or update the existing one) with your TMDB API v3 Access Token:
+
+```env
+VITE_TMDB_ACCESS_TOKEN=your_tmdb_access_token_here
+```
+
+> **Note**: You can get an API Access Token by creating a free account on [The Movie Database (TMDB)](https://www.themoviedb.org/).
+
+### 4. Run the Development Server
+
+```bash
+npm run dev
+```
+
+Open your browser and navigate to `http://localhost:5173` to view the app.
+
+---
+
+## 📜 Available Scripts
+
+In the project directory, you can run:
+
+- `npm run dev` — Starts the local development server with HMR.
+- `npm run build` — Runs TypeScript type-checking and builds the app for production in the `dist` directory.
+- `npm run preview` — Locally previews the production build.
+- `npm run lint` — Runs ESLint to check for code quality and style issues.
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
