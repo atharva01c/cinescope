@@ -65,7 +65,7 @@ Follow these steps to set up and run the project locally on your machine.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/movie-explorer.git
+git clone https://github.com/atharva01c/cinescope.git
 cd movie-explorer
 ```
 
