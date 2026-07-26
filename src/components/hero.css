@@ -28,8 +28,10 @@
   .hero-container {
     margin-top: 0;
     padding-top: 165px;
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
     min-height: auto;
-    padding-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
     background: transparent;
   }
 
@@ -38,6 +40,48 @@
   .hero-backdrop-overlay,
   .hero-featured-badge {
     display: none !important;
+  }
+
+  .hero-content-wrapper {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    margin-bottom: var(--space-sm);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+    margin-bottom: var(--space-lg);
+  }
+
+  .hero-search-form {
+    max-width: 100%;
+    padding: 0.35rem;
+  }
+
+  .hero-search-input {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .hero-search-button {
+    padding: 0.6rem 1rem;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-pill);
+  }
+
+  .hero-search-label {
+    display: none;
+  }
+
+  .hero-search-icon {
+    display: block;
   }
 }
 
@@ -178,6 +222,9 @@
   letter-spacing: 0.05em;
   cursor: pointer;
   transition: all var(--duration-fast) var(--ease-out);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .hero-search-button:hover {

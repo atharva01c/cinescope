@@ -313,19 +313,21 @@
   }
   .details-container {
     padding-top: 15vh;
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
   }
 }
 
 @media (max-width: 768px) {
   .details-container {
-    padding-top: 95px;
+    padding-top: 140px;
   }
   .details-main-info {
     grid-template-columns: 1fr;
     gap: var(--space-xl);
   }
   .details-poster-col {
-    max-width: 320px;
+    max-width: 255px;
     margin: 0 auto;
   }
   .details-content-col {
@@ -342,6 +344,11 @@
   }
   .details-actions {
     justify-content: center;
+  }
+  .cast-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: var(--space-lg);
   }
 }
 

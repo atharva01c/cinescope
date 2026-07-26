@@ -203,9 +203,6 @@ export default function Search() {
               </button>
             )}
           </div>
-          <button type="submit" className="search-page-btn">
-            Search
-          </button>
         </form>
 
         {!query && (
