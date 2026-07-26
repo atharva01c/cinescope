@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import type { Movie } from "../types";
-import { MovieContext } from "../context/MovieContext";
+import { MovieContext } from "../context/movieContext";
 import "./movie-card.css";
 
 interface MovieCardProps {

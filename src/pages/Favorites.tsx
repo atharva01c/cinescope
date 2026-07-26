@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { MovieContext } from "../context/MovieContext";
+import { MovieContext } from "../context/movieContext";
 import MovieGrid from "../components/MovieGrid";
 import { motion, type Variants } from "framer-motion";
 

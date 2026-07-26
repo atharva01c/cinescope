@@ -56,7 +56,9 @@ export default function Search() {
 
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // Sync URL query param to local input state when it changes externally (e.g. back/forward navigation)
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setSearchInput(query);
   }, [query]);
 
@@ -67,12 +69,7 @@ export default function Search() {
   }, []);
 
   useEffect(() => {
-    if (query.trim() === "") {
-      setMovies([]);
-      setTotalResults(0);
-      setTotalPages(1);
-      return;
-    }
+    if (query.trim() === "") return;
 
     const fetchResults = async () => {
       try {
@@ -82,7 +79,7 @@ export default function Search() {
         // Apply genre filter client-side when API doesn't support it in search
         const filtered = genreParam
           ? data.results.filter(
-              (m: Movie) => (m as any).genre_ids?.includes(genreParam) ?? true,
+              (m: Movie) => m.genre_ids?.includes(genreParam) ?? true,
             )
           : data.results;
         setMovies(filtered);

@@ -73,6 +73,24 @@ export default function Movies() {
     }
   };
 
+  const getPaginationRange = () => {
+    const delta = 2;
+    const range: (number | "...")[] = [];
+    const left = Math.max(1, currentPage - delta);
+    const right = Math.min(totalPages, currentPage + delta);
+
+    if (left > 1) {
+      range.push(1);
+      if (left > 2) range.push("...");
+    }
+    for (let i = left; i <= right; i++) range.push(i);
+    if (right < totalPages) {
+      if (right < totalPages - 1) range.push("...");
+      range.push(totalPages);
+    }
+    return range;
+  };
+
   return (
     <motion.div 
       className="movies-page"
@@ -143,21 +161,40 @@ export default function Movies() {
               {movies.length > 0 && totalPages > 1 && (
                 <div className="pagination">
                   <button
+                    className="pagination-btn"
                     onClick={() => handlePageChange(currentPage - 1)}
                     disabled={currentPage === 1}
-                    className="pagination-btn"
                   >
-                    &laquo; Prev
+                    ‹
                   </button>
-                  <span className="pagination-info">
-                    Page <strong>{currentPage}</strong> of <strong>{totalPages}</strong>
-                  </span>
+
+                  <div className="pagination-pages">
+                    {getPaginationRange().map((item, idx) =>
+                      item === "..." ? (
+                        <span
+                          key={`ellipsis-${idx}`}
+                          className="pagination-ellipsis"
+                        >
+                          …
+                        </span>
+                      ) : (
+                        <button
+                          key={item}
+                          className={`pagination-page ${item === currentPage ? "active" : ""}`}
+                          onClick={() => handlePageChange(item as number)}
+                        >
+                          {item}
+                        </button>
+                      ),
+                    )}
+                  </div>
+
                   <button
+                    className="pagination-btn"
                     onClick={() => handlePageChange(currentPage + 1)}
                     disabled={currentPage === totalPages}
-                    className="pagination-btn"
                   >
-                    Next &raquo;
+                    ›
                   </button>
                 </div>
               )}

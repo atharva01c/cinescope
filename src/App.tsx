@@ -10,8 +10,8 @@ import NotFound from "./pages/NotFound";
 import Search from "./pages/Search";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { MovieProvider } from "./context/MovieContext";
-import { ThemeContextProvider } from "./context/ThemeContext";
+import { MovieProvider } from "./context/MovieContext.tsx";
+import { ThemeContextProvider } from "./context/ThemeContext.tsx";
 
 function App() {
   const location = useLocation();

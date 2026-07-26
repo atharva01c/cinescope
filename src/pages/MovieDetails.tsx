@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import type { MovieDetail, CastMember, Movie } from "../types";
 import { getMovieDetails, getMovieCast, getSimilarMovies } from "../services/api";
-import { MovieContext } from "../context/MovieContext";
+import { MovieContext } from "../context/movieContext";
 import { motion, type Variants } from "framer-motion";
 
 const pageVariants: Variants = {
@@ -38,6 +38,7 @@ export default function MovieDetails() {
   } = context;
 
   const movieId = Number(id);
+  const invalidId = isNaN(movieId);
 
   // Scroll to top when movie ID changes
   useEffect(() => {
@@ -45,11 +46,7 @@ export default function MovieDetails() {
   }, [id]);
 
   useEffect(() => {
-    if (isNaN(movieId)) {
-      setError("Invalid Movie ID.");
-      setLoading(false);
-      return;
-    }
+    if (invalidId) return;
 
     const fetchMovieData = async () => {
       try {
@@ -75,7 +72,18 @@ export default function MovieDetails() {
     };
 
     fetchMovieData();
-  }, [movieId]);
+  }, [movieId, invalidId]);
+
+  if (invalidId) {
+    return (
+      <div className="details-error-container">
+        <p className="details-error-message">Invalid Movie ID.</p>
+        <button onClick={() => navigate("/movies")} className="back-home-btn">
+          Back to Movies
+        </button>
+      </div>
+    );
+  }
 
   if (loading) {
     return (
