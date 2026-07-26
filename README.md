@@ -1,4 +1,4 @@
-# 🎬 CineScope — Movie Explorer
+# <a href="http://35.154.56.73/">🎬 CineScope — Movie Explorer</a>
 
 > A sleek, responsive, and feature-rich cinematic web application to discover, search, and curate your personal movie collection. Powered by React 19, Vite, TypeScript, and the TMDB API.
 
@@ -65,7 +65,7 @@ Follow these steps to set up and run the project locally on your machine.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/movie-explorer.git
+git clone https://github.com/atharva01c/cinescope.git
 cd movie-explorer
 ```
 
