@@ -72,7 +72,7 @@
   max-width: 500px;
   font-family: var(--font-body);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 
 @media (max-width: 768px) {

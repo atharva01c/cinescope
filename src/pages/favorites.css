@@ -41,7 +41,7 @@
   text-align: center;
   background: var(--glass-bg);
   backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-xl);
   max-width: 600px;

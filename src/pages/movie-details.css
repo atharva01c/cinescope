@@ -139,7 +139,7 @@
   background: var(--glass-bg-strong);
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   color: var(--text-h);
 }
 
@@ -212,7 +212,7 @@
   background: var(--glass-bg-strong);
   color: var(--text-h);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   min-height: 48px;
 }
 
@@ -353,7 +353,7 @@
     padding: var(--space-md);
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-xl);
     align-items: center;
@@ -482,7 +482,6 @@
   width: 70%;
   border-radius: var(--radius-pill);
 }
-
 
 /* ── Error Container ── */
 .details-error-container {

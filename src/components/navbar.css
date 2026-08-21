@@ -21,7 +21,7 @@
 
   background: var(--glass-bg-strong);
   backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
   border: 1px solid var(--glass-border);
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.4),
@@ -103,7 +103,7 @@
   cursor: pointer;
   transition: all var(--duration-fast) var(--ease-out);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 
 .theme-toggle-btn:hover {
@@ -140,7 +140,7 @@
 
     background: var(--glass-bg-strong);
     backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
     border: 1px solid var(--glass-border);
     box-shadow:
       0 8px 32px rgba(0, 0, 0, 0.4),

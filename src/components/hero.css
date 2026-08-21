@@ -64,7 +64,6 @@
   pointer-events: none;
 }
 
-
 .hero-content-wrapper {
   position: relative;
   z-index: 2;
@@ -103,7 +102,7 @@
 
   background: var(--glass-bg-strong);
   backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
   padding: 0.5rem;
   border-radius: var(--radius-pill);
   border: 1px solid var(--glass-border);
