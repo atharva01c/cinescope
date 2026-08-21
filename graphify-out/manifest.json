@@ -1,162 +1,33 @@
 {
-  "eslint.config.js": {
-    "mtime": 1783757599.1592844,
-    "ast_hash": "0355276bc79439afe3c53e3a2470ca1e",
-    "semantic_hash": ""
-  },
-  "package.json": {
-    "mtime": 1784625339.9700952,
-    "ast_hash": "1da654d1d36fb5540470a0ffcece78c8",
-    "semantic_hash": ""
-  },
-  "src/App.tsx": {
-    "mtime": 1784625679.557642,
-    "ast_hash": "981dc698bcc7d718fb25a0e43cc7a6e7",
-    "semantic_hash": ""
-  },
-  "src/components/Footer.tsx": {
-    "mtime": 1784641684.947258,
-    "ast_hash": "1348d083c6e058c10d945f039496db05",
-    "semantic_hash": ""
-  },
-  "src/components/Hero.tsx": {
-    "mtime": 1785075204.1304605,
-    "ast_hash": "c62b5e0613585e0ad80c3c841cbca249",
-    "semantic_hash": ""
-  },
-  "src/components/MovieCard.tsx": {
-    "mtime": 1784639518.167668,
-    "ast_hash": "4155c513478004f34946eb7a76a7b59e",
-    "semantic_hash": ""
-  },
-  "src/components/MovieGrid.tsx": {
-    "mtime": 1783784966.240346,
-    "ast_hash": "69ae3146914f42f972f0b4c79576349f",
-    "semantic_hash": ""
-  },
-  "src/components/MovieSection.tsx": {
-    "mtime": 1783785286.4500961,
-    "ast_hash": "e4f7d99e7bee273048a2589c5eecd551",
-    "semantic_hash": ""
-  },
-  "src/components/Navbar.tsx": {
-    "mtime": 1784628848.7532923,
-    "ast_hash": "0245bd90bffaee667abb762f9c7aabc0",
-    "semantic_hash": ""
-  },
-  "src/context/MovieContext.tsx": {
-    "mtime": 1783784970.4112835,
-    "ast_hash": "d5bed68a60670243c66c655db24c5532",
-    "semantic_hash": ""
-  },
-  "src/context/ThemeContext.tsx": {
-    "mtime": 1784628579.523283,
-    "ast_hash": "7a539ca87f15bd60080392458018b0ee",
-    "semantic_hash": ""
-  },
-  "src/main.tsx": {
-    "mtime": 1783758557.7538078,
-    "ast_hash": "261f569f6ed18adedeca4c7d74e893cb",
-    "semantic_hash": ""
-  },
-  "src/pages/Favorites.tsx": {
-    "mtime": 1784625874.245567,
-    "ast_hash": "3fb9d6839ae1585a8ee6c3d23c4861ab",
-    "semantic_hash": ""
-  },
-  "src/pages/Home.tsx": {
-    "mtime": 1784640237.4607182,
-    "ast_hash": "a15659c6a3d627df2f7959414462faaa",
-    "semantic_hash": ""
-  },
-  "src/pages/MovieDetails.tsx": {
-    "mtime": 1785077529.5589926,
-    "ast_hash": "c7fe1d71199ccc10b18e0c341079448f",
-    "semantic_hash": ""
-  },
-  "src/pages/Movies.tsx": {
-    "mtime": 1784627807.6009095,
-    "ast_hash": "c4f5c3d9ea3f3cef9fb64a3151be9c74",
-    "semantic_hash": ""
-  },
-  "src/pages/NotFound.tsx": {
-    "mtime": 1784625874.5809288,
-    "ast_hash": "55c37fc9e10a61d534623c95e358a0d6",
-    "semantic_hash": ""
-  },
-  "src/pages/Search.tsx": {
-    "mtime": 1785079551.3912313,
-    "ast_hash": "3a90b7102fc3148025c62c08612f786d",
-    "semantic_hash": ""
-  },
-  "src/pages/Watchlist.tsx": {
-    "mtime": 1784625874.5523636,
-    "ast_hash": "c2538eb560f3d92c4eef94622f18d99d",
-    "semantic_hash": ""
-  },
-  "src/services/api.ts": {
-    "mtime": 1783786239.145528,
-    "ast_hash": "346f33577b9a89042949f6a3929a0c4d",
-    "semantic_hash": ""
-  },
-  "src/types/Theme.ts": {
-    "mtime": 1784622703.6312237,
-    "ast_hash": "018ec92c4e69a814930a1f6f9dbd653c",
-    "semantic_hash": ""
-  },
-  "src/types/index.ts": {
-    "mtime": 1783784857.896961,
-    "ast_hash": "9cffcf89424e5725cbd4365be80a797f",
-    "semantic_hash": ""
-  },
-  "tsconfig.app.json": {
-    "mtime": 1782837812.6059992,
-    "ast_hash": "5f2dafd737dea8a4ddcbb10f5113ac5a",
-    "semantic_hash": ""
-  },
-  "tsconfig.json": {
-    "mtime": 1782837812.6157415,
-    "ast_hash": "a3d39fa780ebff65444de257f291ce6c",
-    "semantic_hash": ""
-  },
-  "tsconfig.node.json": {
-    "mtime": 1782837812.619511,
-    "ast_hash": "f9cb81ddcea69ffdab672fc8c48dca66",
-    "semantic_hash": ""
-  },
-  "vite.config.ts": {
-    "mtime": 1784707200.3911777,
-    "ast_hash": "580318768adc59c652bdad74b20e7797",
-    "semantic_hash": ""
-  },
-  "README.md": {
-    "mtime": 1784741334.0099473,
-    "ast_hash": "ad5e1991fe8f643383dd4928bab92e5a",
-    "semantic_hash": ""
-  },
-  "SKILL.md": {
-    "mtime": 1784624305.0283737,
-    "ast_hash": "31c633612585bf2dd4e6d1103afc9f33",
-    "semantic_hash": ""
-  },
-  "index.html": {
-    "mtime": 1784641988.7312005,
-    "ast_hash": "8880629c36d7a58ddb83b4b4c850a1f1",
-    "semantic_hash": ""
-  },
-  "src/assets/hero.png": {
-    "mtime": 1782837812.643578,
-    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
-    "semantic_hash": ""
-  },
-  "src/assets/react.svg": {
-    "mtime": 1782837812.7091117,
-    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
-    "semantic_hash": ""
-  },
-  "src/assets/vite.svg": {
-    "mtime": 1782837812.7255335,
-    "ast_hash": "9960a24288958394ac50e57ff638b036",
-    "semantic_hash": ""
-  }
+  "eslint.config.js": 1787293657.1957219,
+  "vite.config.ts": 1787293657.2252789,
+  "src\\App.tsx": 1787310409.0622268,
+  "src\\main.tsx": 1787293657.2177205,
+  "src\\components\\Footer.tsx": 1787310110.9201126,
+  "src\\components\\Hero.tsx": 1787293657.212919,
+  "src\\components\\MovieCard.tsx": 1787308021.9470775,
+  "src\\components\\MovieGrid.tsx": 1787293657.2139268,
+  "src\\components\\MovieSection.tsx": 1787293657.2139268,
+  "src\\components\\Navbar.tsx": 1787309389.467295,
+  "src\\context\\movieContext.ts": 1787293657.2177205,
+  "src\\context\\MovieContext.tsx": 1787293657.2164924,
+  "src\\context\\themeContext.ts": 1787293657.2177205,
+  "src\\context\\ThemeContext.tsx": 1787309933.8556623,
+  "src\\pages\\Favorites.tsx": 1787308392.5398097,
+  "src\\pages\\Home.tsx": 1787310100.8029141,
+  "src\\pages\\MovieDetails.tsx": 1787308392.5589924,
+  "src\\pages\\Movies.tsx": 1787308136.6588306,
+  "src\\pages\\NotFound.tsx": 1787308392.5558772,
+  "src\\pages\\Search.tsx": 1787308269.196185,
+  "src\\pages\\Watchlist.tsx": 1787310034.529847,
+  "src\\services\\api.ts": 1787293657.2232738,
+  "src\\types\\index.ts": 1787293657.2242765,
+  "src\\types\\Theme.ts": 1787293657.2242765,
+  "index.html": 1787307794.5570867,
+  "README.md": 1787293657.1957219,
+  "graphify-out\\graph.html": 1787310831.3874745,
+  "graphify-out\\GRAPH_REPORT.md": 1787310821.1143386,
+  "src\\assets\\hero.png": 1787293657.211378,
+  "src\\assets\\react.svg": 1787293657.211905,
+  "src\\assets\\vite.svg": 1787293657.211905
 }

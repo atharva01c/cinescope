@@ -3,17 +3,12 @@ import { useParams, useNavigate } from "react-router-dom";
 import type { MovieDetail, CastMember, Movie } from "../types";
 import { getMovieDetails, getMovieCast, getSimilarMovies } from "../services/api";
 import { MovieContext } from "../context/movieContext";
-import { motion, type Variants } from "framer-motion";
-
-const pageVariants: Variants = {
-  initial: { opacity: 0, filter: "blur(20px)" },
-  animate: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.7, ease: "easeOut" } },
-  exit: { opacity: 0, filter: "blur(20px)", transition: { duration: 0.4, ease: "easeIn" } }
-};
+import { motion, useReducedMotion, type Variants } from "framer-motion";
 import MovieCard from "../components/MovieCard";
 import "./movie-details.css";
 
 export default function MovieDetails() {
+  const prefersReducedMotion = useReducedMotion();
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const context = useContext(MovieContext);
@@ -23,6 +18,10 @@ export default function MovieDetails() {
   const [similar, setSimilar] = useState<Movie[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+
+  const pageVariants: Variants = prefersReducedMotion
+    ? { initial: { opacity: 0 }, animate: { opacity: 1 }, exit: { opacity: 0 } }
+    : { initial: { opacity: 0, filter: "blur(20px)" }, animate: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.7, ease: "easeOut" } }, exit: { opacity: 0, filter: "blur(20px)", transition: { duration: 0.4, ease: "easeIn" } } };
 
   if (!context) {
     throw new Error("MovieDetails must be used within a MovieProvider");
@@ -53,7 +52,6 @@ export default function MovieDetails() {
         setLoading(true);
         setError(null);
 
-        // Fetch movie detail, cast list, and similar movies concurrently
         const [detailData, castData, similarData] = await Promise.all([
           getMovieDetails(movieId),
           getMovieCast(movieId),
@@ -123,7 +121,6 @@ export default function MovieDetails() {
   const favorited = isInFavorites(movie.id);
   const watchlisted = isInWatchlist(movie.id);
 
-  // Format runtime to h and m (e.g. 148 -> 2h 28m)
   const formatRuntime = (minutes: number) => {
     if (!minutes) return "N/A";
     const hours = Math.floor(minutes / 60);
@@ -214,12 +211,14 @@ export default function MovieDetails() {
               <button
                 className={`action-btn fav-action-btn ${favorited ? "active" : ""}`}
                 onClick={() => (favorited ? removeFromFavorites(movie.id) : addToFavorites(movie))}
+                aria-label={favorited ? "Remove from Favorites" : "Add to Favorites"}
               >
                 {favorited ? "★ Favorited" : "☆ Add to Favorites"}
               </button>
               <button
                 className={`action-btn watch-action-btn ${watchlisted ? "active" : ""}`}
                 onClick={() => (watchlisted ? removeFromWatchlist(movie.id) : addToWatchlist(movie))}
+                aria-label={watchlisted ? "Remove from Watchlist" : "Add to Watchlist"}
               >
                 {watchlisted ? "✓ Watchlisted" : "+ Add to Watchlist"}
               </button>

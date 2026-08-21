@@ -32,8 +32,15 @@ export default function MovieCard({ movie }: MovieCardProps) {
     navigate(`/movie/${movie.id}`);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      navigate(`/movie/${movie.id}`);
+    }
+  };
+
   const handleFavoriteClick = (e: React.MouseEvent) => {
-    e.stopPropagation(); // Prevent navigating to movie details when clicking buttons
+    e.stopPropagation();
     if (favorited) {
       removeFromFavorites(movie.id);
     } else {
@@ -42,7 +49,7 @@ export default function MovieCard({ movie }: MovieCardProps) {
   };
 
   const handleWatchlistClick = (e: React.MouseEvent) => {
-    e.stopPropagation(); // Prevent navigating to movie details when clicking buttons
+    e.stopPropagation();
     if (watchlisted) {
       removeFromWatchlist(movie.id);
     } else {
@@ -59,7 +66,14 @@ export default function MovieCard({ movie }: MovieCardProps) {
     : "https://via.placeholder.com/342x513?text=No+Poster";
 
   return (
-    <div className="movie-card" onClick={handleCardClick}>
+    <button
+      className="movie-card"
+      onClick={handleCardClick}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+      role="link"
+      aria-label={`View details for ${movie.title}`}
+    >
       <div className="movie-poster-container">
         <img
           src={posterUrl}
@@ -81,14 +95,14 @@ export default function MovieCard({ movie }: MovieCardProps) {
           <button
             className={`overlay-btn fav-btn ${favorited ? "active" : ""}`}
             onClick={handleFavoriteClick}
-            title={favorited ? "Remove from Favorites" : "Add to Favorites"}
+            aria-label={favorited ? `Remove ${movie.title} from Favorites` : `Add ${movie.title} to Favorites`}
           >
             {favorited ? "★" : "☆"}
           </button>
           <button
             className={`overlay-btn watch-btn ${watchlisted ? "active" : ""}`}
             onClick={handleWatchlistClick}
-            title={watchlisted ? "Remove from Watchlist" : "Add to Watchlist"}
+            aria-label={watchlisted ? `Remove ${movie.title} from Watchlist` : `Add ${movie.title} to Watchlist`}
           >
             {watchlisted ? "✓" : "+"}
           </button>
@@ -99,6 +113,6 @@ export default function MovieCard({ movie }: MovieCardProps) {
         <h3 className="movie-card-title" title={movie.title}>{movie.title}</h3>
         <p className="movie-card-year">{releaseYear}</p>
       </div>
-    </div>
+    </button>
   );
 }

@@ -1,6 +1,8 @@
 import "./App.css";
+import "./components/shared.css";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import { useEffect } from "react";
 import Home from "./pages/Home";
 import Movies from "./pages/Movies";
 import Favorites from "./pages/Favorites";
@@ -13,6 +15,16 @@ import Footer from "./components/Footer";
 import { MovieProvider } from "./context/MovieContext.tsx";
 import { ThemeContextProvider } from "./context/ThemeContext.tsx";
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   const location = useLocation();
 
@@ -21,6 +33,7 @@ function App() {
       <MovieProvider>
         <div className="app-container">
           <Navbar />
+          <ScrollToTop />
           <main className="main-content">
             <AnimatePresence mode="wait">
               <Routes location={location} key={location.pathname}>

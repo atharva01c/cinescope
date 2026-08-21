@@ -1,24 +1,10 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
-import { motion, type Variants } from "framer-motion";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
 import type { Movie, Genre } from "../types";
 import { searchMovies, getGenres } from "../services/api";
 import MovieGrid from "../components/MovieGrid";
 import "./search.css";
-
-const pageVariants: Variants = {
-  initial: { opacity: 0, filter: "blur(10px)" },
-  animate: {
-    opacity: 1,
-    filter: "blur(0px)",
-    transition: { duration: 0.5, ease: "easeOut" },
-  },
-  exit: {
-    opacity: 0,
-    filter: "blur(10px)",
-    transition: { duration: 0.3, ease: "easeIn" },
-  },
-};
 
 const POPULAR_SEARCHES = [
   "Avengers",
@@ -32,6 +18,7 @@ const POPULAR_SEARCHES = [
 ];
 
 export default function Search() {
+  const prefersReducedMotion = useReducedMotion();
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
 
@@ -53,10 +40,19 @@ export default function Search() {
   const [totalResults, setTotalResults] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [filtersOpen, setFiltersOpen] = useState(false);
 
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Sync URL query param to local input state when it changes externally (e.g. back/forward navigation)
+  const pageVariants: Variants = prefersReducedMotion
+    ? { initial: { opacity: 0 }, animate: { opacity: 1 }, exit: { opacity: 0 } }
+    : {
+        initial: { opacity: 0, filter: "blur(10px)" },
+        animate: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.5, ease: "easeOut" } },
+        exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.3, ease: "easeIn" } },
+      };
+
+  // Sync URL query param to local input state when it changes externally
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setSearchInput(query);
@@ -76,14 +72,13 @@ export default function Search() {
         setLoading(true);
         setError(null);
         const data = await searchMovies(query, pageParam);
-        // Apply genre filter client-side when API doesn't support it in search
         const filtered = genreParam
           ? data.results.filter(
               (m: Movie) => m.genre_ids?.includes(genreParam) ?? true,
             )
           : data.results;
         setMovies(filtered);
-        setTotalResults(data.total_pages * 20); // approximate
+        setTotalResults(data.total_pages * 20);
         setTotalPages(Math.min(data.total_pages, 500));
       } catch (err) {
         console.error("Search failed:", err);
@@ -96,7 +91,6 @@ export default function Search() {
     fetchResults();
   }, [query, pageParam, genreParam]);
 
-  // Debounced search: commits query to URL after 500ms of no typing
   const commitSearch = useCallback(
     (value: string) => {
       if (debounceRef.current) clearTimeout(debounceRef.current);
@@ -131,7 +125,7 @@ export default function Search() {
   const handlePageChange = (newPage: number) => {
     if (newPage < 1 || newPage > totalPages) return;
     setSearchParams({ q: query, page: String(newPage), sort: sortParam });
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
   };
 
   const handlePopularSearch = (term: string) => {
@@ -222,7 +216,17 @@ export default function Search() {
 
       {query ? (
         <div className="search-layout">
-          <aside className="search-controls">
+          {/* Mobile Filter Toggle */}
+          <button
+            className="filter-toggle-btn"
+            onClick={() => setFiltersOpen(!filtersOpen)}
+            aria-expanded={filtersOpen}
+            aria-controls="search-filters"
+          >
+            {filtersOpen ? "✕ Hide Filters" : "☰ Show Filters"}
+          </button>
+
+          <aside className={`search-controls ${filtersOpen ? "open" : ""}`} id="search-filters">
             <div className="control-group">
               <h3>Sort By</h3>
               <select value={sortParam} onChange={handleSortChange}>
@@ -339,6 +343,7 @@ export default function Search() {
                       className="pagination-btn"
                       onClick={() => handlePageChange(pageParam - 1)}
                       disabled={pageParam === 1}
+                      aria-label="Previous page"
                     >
                       ‹
                     </button>
@@ -357,6 +362,7 @@ export default function Search() {
                             key={item}
                             className={`pagination-page ${item === pageParam ? "active" : ""}`}
                             onClick={() => handlePageChange(item as number)}
+                            aria-label={`Page ${item}`}
                           >
                             {item}
                           </button>
@@ -368,6 +374,7 @@ export default function Search() {
                       className="pagination-btn"
                       onClick={() => handlePageChange(pageParam + 1)}
                       disabled={pageParam === totalPages}
+                      aria-label="Next page"
                     >
                       ›
                     </button>

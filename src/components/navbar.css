@@ -1,7 +1,8 @@
 /* ═══════════════════════════════════════════════════════════
-   Navbar — Floating Glass Pill
+   Navbar — Floating Glass Pill (desktop) / Corner + Bottom Pill (mobile)
    ═══════════════════════════════════════════════════════════ */
 
+/* ── Desktop Navbar ── */
 .navbar {
   position: fixed;
   top: var(--space-md);
@@ -20,20 +21,13 @@
 
   background: var(--glass-bg-strong);
   backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border: 1px solid var(--glass-border);
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 
   transition: all var(--duration-normal) var(--ease-out);
-}
-
-/* Optional: shrink slightly when scrolling (can be toggled via JS class) */
-.navbar.scrolled {
-  top: var(--space-sm);
-  padding: 0.5rem 1.25rem;
-  background: rgba(10, 10, 10, 0.75);
-  backdrop-filter: blur(32px);
 }
 
 .navbar-brand a {
@@ -97,6 +91,7 @@
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
+/* ── Theme Toggle (desktop) ── */
 .theme-toggle-btn {
   background: var(--glass-bg) !important;
   border: 1px solid var(--glass-border) !important;
@@ -108,6 +103,7 @@
   cursor: pointer;
   transition: all var(--duration-fast) var(--ease-out);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .theme-toggle-btn:hover {
@@ -116,31 +112,66 @@
   transform: translateY(-1px);
 }
 
+/* ── Mobile: bottom pill ── */
+.navbar-mobile {
+  display: none;
+}
+
 @media (max-width: 768px) {
+  /* Hide desktop navbar */
   .navbar {
-    top: 0;
-    left: 0;
-    right: 0;
-    transform: none;
-    width: 100%;
-    max-width: 100%;
-    padding: 0.5rem 1rem;
-    flex-direction: column;
-    gap: 0.75rem;
-    border-radius: 0;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    display: none;
   }
 
-  .navbar-links {
-    width: 100%;
-    justify-content: space-between;
-    gap: 0;
+  /* Bottom pill nav */
+  .navbar-mobile {
+    display: flex;
+    position: fixed;
+    bottom: max(var(--space-md), env(safe-area-inset-bottom, 16px));
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+
+    align-items: center;
+    gap: 0.25rem;
+
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-pill);
+
+    background: var(--glass-bg-strong);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--glass-border);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 
-  .navbar-links a {
-    padding: 0.4rem 0.75rem;
-    font-size: 0.75rem;
+  .navbar-mobile .tab-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--text-muted);
+    padding: 0.55rem 0.7rem;
+    border-radius: var(--radius-pill);
+    min-width: 44px;
+    min-height: 44px;
+    transition: all var(--duration-fast) var(--ease-out);
+    -webkit-tap-highlight-color: transparent;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .navbar-mobile .tab-item:hover {
+    color: var(--text-h);
+    background: var(--glass-bg-hover);
+  }
+
+  .navbar-mobile .tab-item.active {
+    color: var(--text-h);
+    background: var(--glass-bg-strong);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 }

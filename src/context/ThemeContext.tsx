@@ -24,7 +24,11 @@ export function ThemeContextProvider({ children }: ThemeProviderProps) {
   }, [theme]);
 
   function toggleTheme() {
+    document.documentElement.classList.add("theme-transitioning");
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+    setTimeout(() => {
+      document.documentElement.classList.remove("theme-transitioning");
+    }, 400);
   }
 
   return (
@@ -33,5 +37,3 @@ export function ThemeContextProvider({ children }: ThemeProviderProps) {
     </ThemeContext.Provider>
   );
 }
-
-

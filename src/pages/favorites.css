@@ -3,12 +3,12 @@
    ═══════════════════════════════════════════════════════════ */
 
 .favorites-page {
-  padding: calc(100px + var(--space-2xl)) var(--space-xl) var(--space-3xl);
+  padding: calc(112px + var(--space-xl)) var(--space-xl) var(--space-3xl);
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .favorites-header {
@@ -37,7 +37,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--space-3xl) var(--space-lg);
+  padding: var(--space-2xl) var(--space-lg);
   text-align: center;
   background: var(--glass-bg);
   backdrop-filter: blur(24px);
@@ -50,8 +50,12 @@
 
 .favorites-empty-state .empty-icon {
   font-size: 4rem;
-  color: rgba(255, 255, 255, 0.2);
+  color: var(--text-muted);
   margin-bottom: var(--space-md);
+}
+
+[data-theme="light"] .favorites-empty-state .empty-icon {
+  color: rgba(0, 0, 0, 0.25);
 }
 
 .favorites-empty-state h2 {
@@ -88,8 +92,17 @@
   box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
 }
 
+[data-theme="light"] .browse-movies-btn {
+  background: var(--text-h);
+  color: #fff;
+}
+
+[data-theme="light"] .browse-movies-btn:hover {
+  background: rgba(25, 20, 15, 0.95);
+}
+
 @media (max-width: 768px) {
   .favorites-page {
-    padding: 165px var(--space-md) var(--space-2xl);
+    padding: var(--space-lg) var(--space-md) calc(var(--space-2xl) + 80px);
   }
 }

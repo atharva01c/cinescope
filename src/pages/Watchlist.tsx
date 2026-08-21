@@ -1,19 +1,30 @@
 import { useContext } from "react";
 import { MovieContext } from "../context/movieContext";
 import MovieGrid from "../components/MovieGrid";
-import { motion, type Variants } from "framer-motion";
-
-const pageVariants: Variants = {
-  initial: { opacity: 0, filter: "blur(10px)" },
-  animate: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.5, ease: "easeOut" } },
-  exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.3, ease: "easeIn" } }
-};
+import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "./watchlist.css";
 
 export default function Watchlist() {
+  const prefersReducedMotion = useReducedMotion();
   const context = useContext(MovieContext);
   const navigate = useNavigate();
+
+  const pageVariants: Variants = prefersReducedMotion
+    ? { initial: { opacity: 0 }, animate: { opacity: 1 }, exit: { opacity: 0 } }
+    : {
+        initial: { opacity: 0, filter: "blur(10px)" },
+        animate: {
+          opacity: 1,
+          filter: "blur(0px)",
+          transition: { duration: 0.5, ease: "easeOut" },
+        },
+        exit: {
+          opacity: 0,
+          filter: "blur(10px)",
+          transition: { duration: 0.3, ease: "easeIn" },
+        },
+      };
 
   if (!context) {
     throw new Error("Watchlist page must be used within a MovieProvider");
@@ -22,7 +33,7 @@ export default function Watchlist() {
   const { watchlist } = context;
 
   return (
-    <motion.div 
+    <motion.div
       className="watchlist-page"
       variants={pageVariants}
       initial="initial"
@@ -30,7 +41,7 @@ export default function Watchlist() {
       exit="exit"
     >
       <header className="watchlist-header">
-        <h1 className="watchlist-title">My Watchlist</h1>
+        <h1 className="watchlist-title">Watchlist</h1>
         <p className="watchlist-subtitle">
           Movies you are planning to watch in the future
         </p>
@@ -41,9 +52,13 @@ export default function Watchlist() {
           <div className="empty-icon">➕</div>
           <h2>Your Watchlist is Empty</h2>
           <p>
-            Find interesting movies in our explorer and click the plus icon on any movie card to save them here for later.
+            Find interesting movies in our explorer and click the plus icon on
+            any movie card to save them here for later.
           </p>
-          <button className="browse-movies-btn" onClick={() => navigate("/movies")}>
+          <button
+            className="browse-movies-btn"
+            onClick={() => navigate("/movies")}
+          >
             Browse Movies
           </button>
         </div>

@@ -1,15 +1,14 @@
 import { useNavigate } from "react-router-dom";
-import { motion, type Variants } from "framer-motion";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
 import "./not-found.css";
 
-const pageVariants: Variants = {
-  initial: { opacity: 0, filter: "blur(10px)" },
-  animate: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.5, ease: "easeOut" } },
-  exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.3, ease: "easeIn" } }
-};
-
 export default function NotFound() {
+  const prefersReducedMotion = useReducedMotion();
   const navigate = useNavigate();
+
+  const pageVariants: Variants = prefersReducedMotion
+    ? { initial: { opacity: 0 }, animate: { opacity: 1 }, exit: { opacity: 0 } }
+    : { initial: { opacity: 0, filter: "blur(10px)" }, animate: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.5, ease: "easeOut" } }, exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.3, ease: "easeIn" } } };
 
   return (
     <motion.div 

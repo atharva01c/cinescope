@@ -1,17 +1,12 @@
 import { useState, useEffect } from "react";
-import { motion, type Variants } from "framer-motion";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
 import MovieGrid from "../components/MovieGrid";
 import type { Movie, Genre } from "../types";
 import { getGenres, discoverMovies } from "../services/api";
 import "./movies.css";
 
-const pageVariants: Variants = {
-  initial: { opacity: 0, filter: "blur(10px)" },
-  animate: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.5, ease: "easeOut" } },
-  exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.3, ease: "easeIn" } }
-};
-
 export default function Movies() {
+  const prefersReducedMotion = useReducedMotion();
   const [movies, setMovies] = useState<Movie[]>([]);
   const [genres, setGenres] = useState<Genre[]>([]);
   const [selectedGenre, setSelectedGenre] = useState<number | null>(null);
@@ -20,6 +15,11 @@ export default function Movies() {
   const [totalPages, setTotalPages] = useState<number>(1);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const [filtersOpen, setFiltersOpen] = useState<boolean>(false);
+
+  const pageVariants: Variants = prefersReducedMotion
+    ? { initial: { opacity: 0 }, animate: { opacity: 1 }, exit: { opacity: 0 } }
+    : { initial: { opacity: 0, filter: "blur(10px)" }, animate: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.5, ease: "easeOut" } }, exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.3, ease: "easeIn" } } };
 
   // Fetch genres once on mount
   useEffect(() => {
@@ -69,7 +69,7 @@ export default function Movies() {
   const handlePageChange = (newPage: number) => {
     if (newPage >= 1 && newPage <= totalPages) {
       setCurrentPage(newPage);
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
     }
   };
 
@@ -92,7 +92,7 @@ export default function Movies() {
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="movies-page"
       variants={pageVariants}
       initial="initial"
@@ -104,8 +104,18 @@ export default function Movies() {
       </header>
 
       <div className="movies-layout">
+        {/* Mobile Filter Toggle */}
+        <button
+          className="filter-toggle-btn"
+          onClick={() => setFiltersOpen(!filtersOpen)}
+          aria-expanded={filtersOpen}
+          aria-controls="movies-filters"
+        >
+          {filtersOpen ? "✕ Hide Filters" : "☰ Show Filters"}
+        </button>
+
         {/* Sidebar Controls */}
-        <aside className="movies-controls">
+        <aside className={`movies-controls ${filtersOpen ? "open" : ""}`} id="movies-filters">
           <div className="control-group">
             <h3>Sort By</h3>
             <select value={sortBy} onChange={handleSortChange}>
@@ -164,6 +174,7 @@ export default function Movies() {
                     className="pagination-btn"
                     onClick={() => handlePageChange(currentPage - 1)}
                     disabled={currentPage === 1}
+                    aria-label="Previous page"
                   >
                     ‹
                   </button>
@@ -182,6 +193,7 @@ export default function Movies() {
                           key={item}
                           className={`pagination-page ${item === currentPage ? "active" : ""}`}
                           onClick={() => handlePageChange(item as number)}
+                          aria-label={`Page ${item}`}
                         >
                           {item}
                         </button>
@@ -193,6 +205,7 @@ export default function Movies() {
                     className="pagination-btn"
                     onClick={() => handlePageChange(currentPage + 1)}
                     disabled={currentPage === totalPages}
+                    aria-label="Next page"
                   >
                     ›
                   </button>

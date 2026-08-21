@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   MovieSection & MovieGrid
+   MovieSection
    ═══════════════════════════════════════════════════════════ */
 
 .movie-section {
@@ -38,18 +38,6 @@
   gap: var(--space-xl) var(--space-lg);
   padding: 0 var(--space-xl);
   width: 100%;
-}
-
-.movie-grid-empty {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: var(--space-3xl) var(--space-xl);
-  width: 100%;
-  color: var(--text-muted);
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-style: italic;
 }
 
 @media (max-width: 1024px) {

@@ -1,19 +1,18 @@
 import { useContext } from "react";
 import { MovieContext } from "../context/movieContext";
 import MovieGrid from "../components/MovieGrid";
-import { motion, type Variants } from "framer-motion";
-
-const pageVariants: Variants = {
-  initial: { opacity: 0, filter: "blur(10px)" },
-  animate: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.5, ease: "easeOut" } },
-  exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.3, ease: "easeIn" } }
-};
+import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "./favorites.css";
 
 export default function Favorites() {
+  const prefersReducedMotion = useReducedMotion();
   const context = useContext(MovieContext);
   const navigate = useNavigate();
+
+  const pageVariants: Variants = prefersReducedMotion
+    ? { initial: { opacity: 0 }, animate: { opacity: 1 }, exit: { opacity: 0 } }
+    : { initial: { opacity: 0, filter: "blur(10px)" }, animate: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.5, ease: "easeOut" } }, exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.3, ease: "easeIn" } } };
 
   if (!context) {
     throw new Error("Favorites page must be used within a MovieProvider");
