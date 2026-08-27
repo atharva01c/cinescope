@@ -140,18 +140,21 @@
     display: flex;
     position: fixed;
     bottom: max(var(--space-md), env(safe-area-inset-bottom, 16px));
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    justify-content: center;
     z-index: 1000;
+    will-change: transform;
 
     align-items: center;
     gap: 0.25rem;
 
     padding: 0.5rem 0.75rem;
     border-radius: var(--radius-pill);
+    width: fit-content;
+    margin: 0 auto;
 
     background: var(--glass-bg-strong);
-    backdrop-filter: blur(24px);
     backdrop-filter: blur(24px);
     border: 1px solid var(--glass-border);
     box-shadow:
@@ -160,7 +163,8 @@
   }
 
   [data-theme="light"] .navbar-mobile {
-    background: rgba(255, 252, 248, 0.78);
+    background: rgba(255, 252, 248, 0.5);
+    backdrop-filter: blur(40px);
     border-color: rgba(40, 35, 30, 0.15);
     box-shadow:
       0 8px 32px rgba(40, 35, 30, 0.1),
