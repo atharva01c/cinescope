@@ -10,6 +10,7 @@
   background: transparent;
   cursor: pointer;
   text-decoration: none;
+  color: inherit;
   transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
   outline: none;
   border: none;
@@ -274,6 +275,17 @@
   color: #2070d0;
   border-color: rgba(32, 112, 208, 0.3);
   text-shadow: none;
+}
+
+/* ── Light Mode Rating Badge ── */
+[data-theme="light"] .movie-rating-badge {
+  background: rgba(255, 255, 255, 0.85);
+  color: rgba(0, 0, 0, 0.85);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .movie-rating-badge::before {
+  color: #b38600;
 }
 
 /* ── Rating Badge ── */

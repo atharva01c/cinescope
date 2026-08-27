@@ -102,7 +102,6 @@
 
   background: var(--glass-bg-strong);
   backdrop-filter: blur(24px);
-  backdrop-filter: blur(24px);
   padding: 0.5rem;
   border-radius: var(--radius-pill);
   border: 1px solid var(--glass-border);
@@ -114,9 +113,9 @@
 }
 
 .hero-search-form:focus-within {
-  border-color: rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
   box-shadow:
-    0 16px 64px rgba(255, 255, 255, 0.05),
+    0 16px 64px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.15);
   background: rgba(255, 255, 255, 0.1);
 }
@@ -164,6 +163,25 @@
   transform: translateY(0);
 }
 
+/* ── Light Mode ── */
+[data-theme="light"] .hero-search-form:focus-within {
+  border-color: rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  background: var(--bg-elevated);
+}
+
+[data-theme="light"] .hero-search-button {
+  background: var(--text-h);
+  color: #fff;
+}
+
+[data-theme="light"] .hero-search-button:hover {
+  background: rgba(25, 20, 15, 0.95);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
 /* ═══════════════════════════════════════════════════════════
    Mobile — must come AFTER base rules to win specificity
    ═══════════════════════════════════════════════════════════ */
@@ -179,27 +197,13 @@
     background: transparent;
   }
 
+  /* No movie backdrop on mobile. Both gradient scrims exist only to keep the
+     title legible over that image, so they come out with it — otherwise they
+     tint the hero for no reason and cost light mode contrast. */
+  .hero-backdrop-image,
+  .hero-backdrop-overlay,
   .hero-container::after {
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.1) 0%,
-      rgba(0, 0, 0, 0.5) 50%,
-      var(--bg) 100%
-    );
-  }
-
-  .hero-backdrop-image {
-    opacity: 0.3;
-    filter: brightness(0.6) contrast(1.4);
-  }
-
-  .hero-backdrop-overlay {
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.05) 0%,
-      rgba(0, 0, 0, 0.4) 50%,
-      var(--bg) 100%
-    );
+    display: none;
   }
 
   .hero-content-wrapper {
@@ -209,6 +213,9 @@
   .hero-title {
     font-size: clamp(2rem, 8vw, 2.8rem);
     margin-bottom: var(--space-sm);
+    /* The shadow was lifting the title off the backdrop image. With no image
+       it just smudges — and in light mode it is a black glow on cream. */
+    text-shadow: none;
   }
 
   .hero-subtitle {

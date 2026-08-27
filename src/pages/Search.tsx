@@ -139,6 +139,32 @@ export default function Search() {
     setMovies([]);
   };
 
+  // Keyboard shortcuts: Cmd/Ctrl+K to focus search, Escape to clear
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Cmd/Ctrl + K to focus search input
+      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+        e.preventDefault();
+        const input = document.getElementById("search-input") as HTMLInputElement | null;
+        if (input) {
+          input.focus();
+          input.select();
+        }
+      }
+      // Escape to clear search when input is focused
+      if (e.key === "Escape") {
+        const input = document.getElementById("search-input");
+        if (document.activeElement === input) {
+          handleClearSearch();
+          input?.blur();
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   const getPaginationRange = () => {
     const delta = 2;
     const range: (number | "...")[] = [];

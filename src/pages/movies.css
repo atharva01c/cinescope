@@ -45,7 +45,6 @@
   gap: var(--space-xl);
   background: var(--glass-bg);
   backdrop-filter: blur(24px);
-  backdrop-filter: blur(24px);
   padding: var(--space-xl);
   border-radius: var(--radius-xl);
   border: 1px solid var(--glass-border);

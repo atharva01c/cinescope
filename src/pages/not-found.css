@@ -19,7 +19,6 @@
   text-align: center;
   background: var(--glass-bg);
   backdrop-filter: blur(24px);
-  backdrop-filter: blur(24px);
   border: 1px solid var(--glass-border);
   padding: var(--space-3xl) var(--space-2xl);
   border-radius: var(--radius-xl);

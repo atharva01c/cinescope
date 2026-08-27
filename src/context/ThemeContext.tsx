@@ -13,7 +13,9 @@ interface ThemeProviderProps {
 export function ThemeContextProvider({ children }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(() => {
     const savedTheme = localStorage.getItem("theme") as Theme;
-    return savedTheme === "light" || savedTheme === "dark" ? savedTheme : "dark";
+    if (savedTheme === "light" || savedTheme === "dark") return savedTheme;
+    // Respect OS preference on first visit
+    return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
   });
 
   useEffect(() => {

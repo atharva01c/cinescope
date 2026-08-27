@@ -19,8 +19,6 @@ export interface MovieDetail extends Movie {
   genres: Genre[];
   tagline: string;
   status: string;
-  budget: number;
-  revenue: number;
 }
 
 export interface CastMember {

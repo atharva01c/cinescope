@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
 import type { Movie } from "../types";
 import { MovieContext } from "../context/movieContext";
 import "./movie-card.css";
@@ -9,7 +8,6 @@ interface MovieCardProps {
 }
 
 export default function MovieCard({ movie }: MovieCardProps) {
-  const navigate = useNavigate();
   const context = useContext(MovieContext);
 
   if (!context) {
@@ -28,18 +26,8 @@ export default function MovieCard({ movie }: MovieCardProps) {
   const favorited = isInFavorites(movie.id);
   const watchlisted = isInWatchlist(movie.id);
 
-  const handleCardClick = () => {
-    navigate(`/movie/${movie.id}`);
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      navigate(`/movie/${movie.id}`);
-    }
-  };
-
   const handleFavoriteClick = (e: React.MouseEvent) => {
+    e.preventDefault();
     e.stopPropagation();
     if (favorited) {
       removeFromFavorites(movie.id);
@@ -49,6 +37,7 @@ export default function MovieCard({ movie }: MovieCardProps) {
   };
 
   const handleWatchlistClick = (e: React.MouseEvent) => {
+    e.preventDefault();
     e.stopPropagation();
     if (watchlisted) {
       removeFromWatchlist(movie.id);
@@ -66,12 +55,9 @@ export default function MovieCard({ movie }: MovieCardProps) {
     : "https://via.placeholder.com/342x513?text=No+Poster";
 
   return (
-    <button
+    <a
+      href={`/movie/${movie.id}`}
       className="movie-card"
-      onClick={handleCardClick}
-      onKeyDown={handleKeyDown}
-      tabIndex={0}
-      role="link"
       aria-label={`View details for ${movie.title}`}
     >
       <div className="movie-poster-container">
@@ -113,6 +99,6 @@ export default function MovieCard({ movie }: MovieCardProps) {
         <h3 className="movie-card-title" title={movie.title}>{movie.title}</h3>
         <p className="movie-card-year">{releaseYear}</p>
       </div>
-    </button>
+    </a>
   );
 }

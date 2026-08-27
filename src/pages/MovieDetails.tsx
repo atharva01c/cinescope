@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import type { MovieDetail, CastMember, Movie } from "../types";
 import { getMovieDetails, getMovieCast, getSimilarMovies } from "../services/api";
 import { MovieContext } from "../context/movieContext";
@@ -38,11 +38,6 @@ export default function MovieDetails() {
 
   const movieId = Number(id);
   const invalidId = isNaN(movieId);
-
-  // Scroll to top when movie ID changes
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [id]);
 
   useEffect(() => {
     if (invalidId) return;
@@ -160,6 +155,14 @@ export default function MovieDetails() {
 
       {/* Main Info Section */}
       <div className="details-container">
+        {/* Back Navigation */}
+        <nav className="details-back-nav" aria-label="Breadcrumb">
+          <button onClick={() => navigate(-1)} className="details-back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            <span>Back</span>
+          </button>
+        </nav>
+
         <div className="details-main-info">
           {/* Poster Column */}
           <div className="details-poster-col">
@@ -195,9 +198,13 @@ export default function MovieDetails() {
             <div className="details-genres">
               {movie.genres &&
                 movie.genres.map((genre) => (
-                  <span key={genre.id} className="genre-pill">
+                  <Link
+                    key={genre.id}
+                    to={`/search?genre=${genre.id}&q=&sort=popularity.desc`}
+                    className="genre-pill genre-pill-link"
+                  >
                     {genre.name}
-                  </span>
+                  </Link>
                 ))}
             </div>
 

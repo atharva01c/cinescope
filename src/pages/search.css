@@ -54,7 +54,6 @@
   align-items: center;
   background: var(--glass-bg-strong);
   backdrop-filter: blur(24px);
-  backdrop-filter: blur(24px);
   border-radius: var(--radius-pill);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
@@ -171,7 +170,6 @@
   flex-direction: column;
   gap: var(--space-xl);
   background: var(--glass-bg);
-  backdrop-filter: blur(24px);
   backdrop-filter: blur(24px);
   padding: var(--space-xl);
   border-radius: var(--radius-xl);

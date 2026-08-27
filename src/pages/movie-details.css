@@ -49,6 +49,38 @@
   z-index: -1;
 }
 
+/* ── Back Navigation ── */
+.details-back-nav {
+  margin-bottom: var(--space-xl);
+}
+
+.details-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-h);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+  backdrop-filter: blur(12px);
+}
+
+.details-back-btn:hover {
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
+  transform: translateX(-2px);
+}
+
+.details-back-btn svg {
+  flex-shrink: 0;
+}
+
 /* ── Details Container ── */
 .details-container {
   max-width: 1200px;
@@ -139,7 +171,6 @@
   background: var(--glass-bg-strong);
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
   color: var(--text-h);
 }
 
@@ -164,6 +195,19 @@
   border-radius: var(--radius-pill);
   font-size: 0.85rem;
   letter-spacing: 0.05em;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.genre-pill-link {
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.genre-pill-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
 }
 
 .details-overview-group {
@@ -211,7 +255,6 @@
   justify-content: center;
   background: var(--glass-bg-strong);
   color: var(--text-h);
-  backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   min-height: 48px;
 }
@@ -339,6 +382,11 @@
     padding-bottom: calc(var(--space-3xl) + 80px);
   }
 
+  .details-back-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
   .details-main-info {
     grid-template-columns: 1fr;
     gap: var(--space-xl);
@@ -352,8 +400,7 @@
   .details-content-col {
     padding: var(--space-md);
     background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-xl);
     align-items: center;
@@ -516,6 +563,22 @@
   color: var(--text-h);
 }
 
+[data-theme="light"] .details-back-btn {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  color: var(--text-h);
+}
+
+[data-theme="light"] .details-back-btn:hover {
+  background: var(--bg-surface);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="light"] .genre-pill-link:hover {
+  background: var(--bg-surface);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
 [data-theme="light"] .details-poster-img {
   border-color: var(--border);
 }
@@ -546,4 +609,16 @@
 [data-theme="light"] .details-error-message {
   background: rgba(224, 48, 48, 0.06);
   border-color: rgba(224, 48, 48, 0.15);
+}
+
+[data-theme="light"] .meta-badge {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  color: var(--text-h);
+}
+
+[data-theme="light"] .meta-badge.rating {
+  border-color: rgba(179, 134, 0, 0.3);
+  color: #8a6600;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
